@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* font-family: 'Inter', sans-serif; */
+
+*, 
+*::after,
+*::before
+{
+    margin: 0;;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root
+{
+    --LimeGreen: hsl(163, 72%, 41%);
+    --BrightRed: hsl(356, 69%, 56%);
+
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram-Start: hsl(37, 97%, 70%);
+    --Instagrom-End: hsl(329, 70%, 58%);
+    --YouTube: hsl(348, 97%, 39%);
+
+    --Toogle-bg-Start: hsl(210, 78%, 56%);
+    --Toogle-bg-End: hsl(146, 68%, 55%);
+
+    --Toogle-bg-Light: hsl(230, 22%, 74%);
+
+    --Dark-bg: hsl(230, 17%, 14%); /* Dark mode variables. */
+    --Dark-Top-bg:hsl(232, 19%, 15%);
+
+    --Dark-Card: hsl(228, 28%, 20%);
+
+    --Dark-Twxt1: hsl(228, 34%, 66%);
+    --Dark-Twext2: hsl(0, 0%, 100%);
+
+    --Light-bg: hsl(0, 0%, 100%); /* Light mode variables. */
+    --Light-Top-bg:hsl(225, 100%, 98%);
+
+    --Light-Card: hsl(227, 47%, 96%);
+
+    --Light-Text1: hsl(228, 12%, 44%);
+    --Light-Text2: hsl(230, 17%, 14%);
+    
+    --Font-Inter: 'Inter', sans-serif; /* Font family variable. */
+
+    --hover: #cdced5;
+}
+
+/* For Dark mode. */
+
+html[data-theme = "dark"] 
+{
+    --light-bg: hsl(230, 17%, 14%); 
+    --light-Top-bg:hsl(232, 19%, 15%);
+
+    --light-Card: hsl(228, 28%, 20%);
+
+    --light-Twxt1: hsl(228, 34%, 66%);
+    --light-Twext2: hsl(0, 0%, 100%);
+}
+
+/* Base styling. */
+
+html
+{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body
+{
+    font-family: 'Inter', sans-serif;
+    margin: 3rem;
+    background: var(--Light-bg);
+}
+
+/* Header section style. */
+
+header
+{
+    margin-bottom: 25px;
+}
+
+header .title
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--Light-Twext2);
+}
+
+header .text
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--Light-Twxt1);
+}
+
+/* Main style. */
+
+main
+{
+    border-top: 1px solid #a3a1a1;
+}
+
+.main-title
+{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    margin-top: 20px;
+}
+
+.main-title p
+{
+    font-size: 14px;
+    color: var(--Light-Twxt1);
+    align-self: center;
+    font-weight: bold;
+}
+
+/* Toogle button style. */
+
+input[type="checkbox"]
+{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.toogle-container
+{
+    display: flex;
+}
+
+label
+{
+    cursor: pointer;
+    width: 5.2rem;
+    height: 2.7rem;
+    background-color: var(--Toogle-bg-Light);
+    border-radius: 100px;
+    position: relative;
+    align-self: center;
+}
+
+label:after
+{
+    position: absolute;
+    content: "";
+    top: 3px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + label
+{
+    background: linear-gradient(90deg, #388FE7 0%, #40DB86 100%);
+}
+
+input:checked + label:after
+{
+    right: calc(100% - 45px);
+    transform: translate(-100%);
+}
+
+/* Card section style. */
+
+.cards-section
+{
+    margin-bottom: 35px;
+}
+
+.card
+{
+    height: 25rem;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--Light-Card);
+    border-radius: 10px;
+}
+
+.card-header
+{
+    grid-column: 2/4;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.card-header img
+{
+    width: 3rem;
+    margin: 15px;
+}
+
+.card-header p
+{
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--Light-Twxt1);
+}
+
+.card-body
+{
+    grid-column: 2/4;
+    text-align: center;
+}
+
+.card-body h1
+{
+    font-size: 6rem;
+    color: var(--Light-Twext2);
+    text-align: center;
+}
+
+.card-body p
+{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--Light-Twxt1);
+}
+
+.card-footer 
+{
+    grid-column: 2/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-footer img
+{
+    width: 1.25rem;
+    margin-right: 5px;
+}
+
+.card-footer p
+{
+    font-size: 1.25rem;
+    color: var(--LimeGreen);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fb
+{
+    border-top: 5px solid var(--Facebook);
+}
+
+.tw
+{
+    border-top: 5px solid var(--Twitter);
+}
+
+.in
+{
+    border-top: 5px solid;
+    border-image-source: linear-gradient(90deg, var(--Instagram-Start) 0%, var(--Instagrom-End) 100%);
+    border-image-slice: 1;
+}
+
+.yt
+{
+    border-top: 5px solid var(--YouTube);
+}
+
+.yt .card-footer p
+{
+    color: var(--BrightRed);
+}
+
+/* Overview section style. */
+
+.overview-section h2
+{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--Light-Text1);
+    letter-spacing: 2px;
+}
+
+.overview-cards
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 20rem;
+    background: var(--Light-Card);
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.page-views
+{
+    font-size: 2rem;
+    color: var(--Light-Text1);
+    margin: auto;
+}
+
+.fb-icon
+{
+    margin: auto;
+    width: 4rem;
+}
+
+.overview-cards h2
+{
+    font-size: 6rem;
+    margin-top: 25px;
+    border-radius: 6px;
+    color: var(--Light-Text2);
+    margin: auto;
+    grid-column: 1/2;
+}
+
+.up-down-icon
+{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+.percentage
+{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: auto;
+    padding-left: 45px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--LimeGreen);
+}
+
+.fb-down
+{
+    color: var(--BrightRed);
+}
+
+.in-up
+{
+    padding-left: 80px;
+    color: var(--LimeGreen);
+} 
+
+.tw-up
+{
+    padding-left: 70px;
+    color: var(--LimeGreen);
+}
+
+.yt-down
+{
+    color: var(--BrightRed);
+    padding-left: 55px;
+}
+
+.attribution
+{
+    padding-top: 50px;
+}
+
+/* Desktop and tablets responsive website. */
+
+@media (min-width: 501px) and (max-width: 768px)
+{
+    .card
+    {
+        margin-top: 0;
+    }
+
+    .cards-section
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .overview-section
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px)
+{
+    .cards-section
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .overview-section
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .overview-cards:nth-child(9)
+    {
+        grid-column: 1/2;
+    }
+
+    .overview-cards  h2
+    {
+        grid-column: 1/2;
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 1201px)
+{
+    body
+    {
+        margin: 5rem;
+    }
+
+    header
+    {
+        margin-bottom: 0;
+    }
+
+    main
+    {
+        border-top: none;
+    }
+
+    .main-title
+    {
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+
+    .main-title p 
+    {
+        font-weight: bold;
+        margin-right: 15px;
+    }
+
+    .card:hover
+    {
+        cursor: pointer;
+        background: var(--hover);
+    }
+
+    .cards-section
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 35px;
+    }
+
+    .overview-section
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 35px;
+    }
+
+    .card-header
+    {
+        margin-top: 20px;
+    }
+
+    .card-header img
+    {
+        width: 2rem;;
+    }
+
+    .overview-cards:hover
+    {
+        cursor: pointer;
+        background: var(--hover);
+    }
+
+    .overview-cards
+    {
+        margin-top: 0;
+    }
+
+    .page-views
+    {
+        font-size: 1.5rem;
+    }
+
+    .fb-icon
+    {
+        width: 2.5rem;
+    }
+
+    .overview-cards h2
+    {
+        grid-column: 1/2;
+        font-size: 4rem;
+    }
+
+    .percentage
+    {
+        font-size: 1.5rem;
+    }
+
+    .tw-up
+    {
+        margin-left: 64px;
+    }
+
+    .overview-section h2
+    {
+        grid-column: 1/5;
+    }
+}

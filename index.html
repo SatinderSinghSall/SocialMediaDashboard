@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+
+<head>
+
+  <link href="./style.css" rel="stylesheet" type="text/css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  
+</head>
+
+<body>
+
+  <header>
+
+    <h1 class="title"> Social Media Dashboard </h1>
+    <h3 class="text"> Total Followers: 23,004 </h3>
+
+  </header>
+
+  <main> 
+
+    <div class="main-title">
+      <p> Dark Mode </p>
+
+      <div class="toogle-container">
+        <input type="checkbox" id="switch" name="theme">
+        <label for="switch"></label>
+      </div>
+    </div>
+
+    <section class="cards-section">
+
+      <div class="card fb">    <!--Facebook.-->
+        <div class="card-header">
+          <img src="./images/icon-facebook.svg" alt="facebook-icon">
+          <p>@nathanf</p>
+        </div>
+
+        <div class="card-body">
+          <h1>1987</h1>
+          <p>FOLLOWERS</p>
+        </div>
+
+        <div class="card-footer">
+          <img src="./images/icon-up.svg" alt="icon-up">
+          <p>12 Today</p>
+        </div>
+      </div>
+
+      <div class="card tw">    <!--Twitter.-->
+        <div class="card-header">
+          <img src="./images/icon-twitter.svg" alt="facebook-icon">
+          <p>@nathanf</p>
+        </div>
+
+        <div class="card-body">
+          <h1>1004</h1>
+          <p>FOLLOWERS</p>
+        </div>
+
+        <div class="card-footer">
+          <img src="./images/icon-up.svg" alt="icon-up">
+          <p>99 Today</p>
+        </div>
+      </div>
+
+      <div class="card in">    <!--Instagram.-->
+        <div class="card-header">
+          <img src="./images/icon-instagram.svg" alt="facebook-icon">
+          <p>@realnathanf</p>
+        </div>
+
+        <div class="card-body">
+          <h1>11K</h1>
+          <p>FOLLOWERS</p>
+        </div>
+
+        <div class="card-footer">
+          <img src="./images/icon-up.svg" alt="icon-up">
+          <p>1099 Today</p>
+        </div>
+      </div>
+
+      <div class="card yt">    <!--Youtube.-->
+        <div class="card-header">
+          <img src="./images/icon-youtube.svg" alt="facebook-icon">
+          <p>Nathan F.</p>
+        </div>
+
+        <div class="card-body">
+          <h1>8239</h1>
+          <p>SUBSCRIBERS</p>
+        </div>
+
+        <div class="card-footer">
+          <img src="./images/icon-down.svg" alt="icon-up">
+          <p>144 Today</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="overview-section">
+
+      <h2 class="overview-title"> Overview - Today </h2>
+
+      <div class="overview-cards">    <!-- Facebook. -->
+
+        <h3 class="page-views"> Page views </h3>
+        <img class="fb-icon" src="./images/icon-facebook.svg" alt="facebook-icon">
+        <h2> 87 </h2>
+        <img class="up-down-icon" src="images/icon-up.svg" alt="up-icon">
+        <p class="percentage fb-up"> 3% </p>
+
+      </div>
+
+      <div class="overview-cards">    <!-- Facebook. -->
+
+        <h3 class="page-views"> Likes </h3>
+        <img class="fb-icon" src="./images/icon-facebook.svg" alt="facebook-icon">
+        <h2> 52 </h2>
+        <img class="up-down-icon" src="images/icon-down.svg" alt="down-icon">
+        <p class="percentage fb-down"> 2% </p>
+
+      </div>
+
+      <div class="overview-cards">    <!-- Instagram. -->
+
+        <h3 class="page-views"> Likes </h3>
+        <img class="fb-icon" src="./images/icon-instagram.svg" alt="instagram-icon">
+        <h2> 5462 </h2>
+        <img class="up-down-icon" src="images/icon-up.svg" alt="up-icon">
+        <p class="percentage in-up"> 2257% </p>
+
+      </div>
+
+      <div class="overview-cards">    <!-- Instagram. -->
+
+        <h3 class="page-views"> Profile views </h3>
+        <img class="fb-icon" src="./images/icon-instagram.svg" alt="instram-icon">
+        <h2> 52K </h2>
+        <img class="up-down-icon" src="images/icon-up.svg" alt="up-icon">
+        <p class="percentage in-up"> 1375% </p>
+
+      </div>
+
+      <div class="overview-cards">    <!-- Twitter. -->
+
+        <h3 class="page-views"> Retweets </h3>
+        <img class="fb-icon" src="./images/icon-twitter.svg" alt="twitter-icon">
+        <h2> 117 </h2>
+        <img class="up-down-icon" src="images/icon-up.svg" alt="up-icon">
+        <p class="percentage tw-up"> 303% </p>
+
+      </div>
+
+      <div class="overview-cards">    <!-- Twitter. -->
+
+        <h3 class="page-views"> Likes </h3>
+        <img class="fb-icon" src="./images/icon-twitter.svg" alt="twitter-icon">
+        <h2> 507 </h2>
+        <img class="up-down-icon" src="images/icon-up.svg" alt="up-icon">
+        <p class="percentage tw-up"> 553% </p>
+
+      </div>
+
+      <div class="overview-cards">    <!-- Youtube. -->
+
+        <h3 class="page-views"> Likes </h3>
+        <img class="fb-icon" src="./images/icon-youtube.svg" alt="youtube-icon">
+        <h2> 107 </h2>
+        <img class="up-down-icon" src="images/icon-down.svg" alt="down-icon">
+        <p class="percentage yt-down"> 19% </p>
+
+      </div>
+
+      <div class="overview-cards">    <!-- Youtube. -->
+
+        <h3 class="page-views"> Total Views </h3>
+        <img class="fb-icon" src="./images/icon-youtube.svg" alt="youtube-icon">
+        <h2> 1407 </h2>
+        <img class="up-down-icon" src="images/icon-down.svg" alt="down-icon">
+        <p class="percentage yt-down"> 12% </p>
+
+      </div>
+
+    </section>
+
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Satinder Singh Sall</a>.
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
